@@ -1,4 +1,4 @@
-## 1. 🚪 Acceso a la Plataforma test
+## 1. 🚪 Acceso a la Plataforma
 
 Para comenzar a utilizar el Entorno Virtual de Aprendizaje (EVA), sigue estos pasos:
 

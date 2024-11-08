@@ -1,0 +1,6 @@
+[book]
+authors = ["alexander"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ManualEVA"

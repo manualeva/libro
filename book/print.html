@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ManualEVA</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="estudiante/introE.html"><strong aria-hidden="true">1.</strong> Intro_Estudiantes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/acceso.html"><strong aria-hidden="true">1.1.</strong> Acceso a la Plataforma</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/ingreso.html"><strong aria-hidden="true">1.1.1.</strong> Cómo ingresar</a></li><li class="chapter-item expanded "><a href="general/rescontra.html"><strong aria-hidden="true">1.1.2.</strong> Restablecimiento de contraseña</a></li><li class="chapter-item expanded "><a href="general/confiP.html"><strong aria-hidden="true">1.1.3.</strong> Configuración del perfil</a></li></ol></li><li class="chapter-item expanded "><a href="estudiante/navegacion.html"><strong aria-hidden="true">1.2.</strong> Navegación en Moodle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="estudiante/interfaz.html"><strong aria-hidden="true">1.2.1.</strong> Interfaz principal</a></li><li class="chapter-item expanded "><a href="estudiante/cursos.html"><strong aria-hidden="true">1.2.2.</strong> Acceso a los cursos</a></li></ol></li><li class="chapter-item expanded "><a href="estudiante/accesoD.html"><strong aria-hidden="true">1.3.</strong> Acceso y Descarga de Materiales</a></li><li class="chapter-item expanded "><a href="estudiante/part.html"><strong aria-hidden="true">1.4.</strong> Participacion en Actividades</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="estudiante/tareas.html"><strong aria-hidden="true">1.4.1.</strong> Tareas</a></li><li class="chapter-item expanded "><a href="estudiante/foros.html"><strong aria-hidden="true">1.4.2.</strong> Foros de discusión</a></li><li class="chapter-item expanded "><a href="estudiante/examen.html"><strong aria-hidden="true">1.4.3.</strong> Cuestionarios y Exámenes</a></li></ol></li><li class="chapter-item expanded "><a href="estudiante/califi.html"><strong aria-hidden="true">1.5.</strong> Seguimiento del Progreso y Calificaciones</a></li><li class="chapter-item expanded "><a href="estudiante/comuni.html"><strong aria-hidden="true">1.6.</strong> Comunicación</a></li><li class="chapter-item expanded "><a href="estudiante/cumplimiento.html"><strong aria-hidden="true">1.7.</strong> Cumplimiento de Plazos</a></li><li class="chapter-item expanded "><a href="estudiante/buenasP.html"><strong aria-hidden="true">1.8.</strong> Buenas Practicas</a></li></ol></li><li class="chapter-item expanded "><a href="docente/introD.html"><strong aria-hidden="true">2.</strong> Intro_Docentes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/acceso.html"><strong aria-hidden="true">2.1.</strong> Acceso a la Plataforma</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="general/ingreso.html"><strong aria-hidden="true">2.1.1.</strong> Cómo ingresar</a></li><li class="chapter-item expanded "><a href="general/rescontra.html"><strong aria-hidden="true">2.1.2.</strong> Restablecimiento de contraseña</a></li><li class="chapter-item expanded "><a href="general/confiP.html"><strong aria-hidden="true">2.1.3.</strong> Configuración del perfil</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ManualEVA</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="-guía-de-uso-del-entorno-virtual-de-aprendizaje-eva-en-moodle-para-estudiantes"><a class="header" href="#-guía-de-uso-del-entorno-virtual-de-aprendizaje-eva-en-moodle-para-estudiantes">📘 Guía de Uso del Entorno Virtual de Aprendizaje (EVA) en Moodle para Estudiantes</a></h1>
+<p>¡Bienvenidos a la <strong>Guía de Uso del Entorno Virtual de Aprendizaje (EVA)</strong>! Esta guía está pensada para estudiantes que desean aprovechar al máximo las herramientas y funcionalidades de <strong>Moodle</strong>. A continuación, encontrarás instrucciones detalladas para explorar cada sección, realizar actividades, y comunicarte de manera efectiva en el EVA.</p>
+<hr />
+<h2 id="-qué-encontrarás-en-esta-guía"><a class="header" href="#-qué-encontrarás-en-esta-guía">📌 ¿Qué encontrarás en esta guía?</a></h2>
+<h3 id="1--acceso-a-la-plataforma"><a class="header" href="#1--acceso-a-la-plataforma">1. 🚪 Acceso a la Plataforma</a></h3>
+<p>Aprende a iniciar sesión en Moodle y a configurar tu perfil para una experiencia personalizada y segura.</p>
+<h3 id="2--navegación-en-moodle"><a class="header" href="#2--navegación-en-moodle">2. 🧭 Navegación en Moodle</a></h3>
+<p>Descubre cómo desplazarte entre cursos, módulos y secciones, y familiarízate con la interfaz para una navegación sencilla y eficiente.</p>
+<h3 id="3--acceso-y-descarga-de-materiales"><a class="header" href="#3--acceso-y-descarga-de-materiales">3. 📥 Acceso y Descarga de Materiales</a></h3>
+<p>Conoce cómo acceder, visualizar y descargar los recursos compartidos en cada curso: documentos, videos, enlaces, y más.</p>
+<h3 id="4--participación-en-actividades"><a class="header" href="#4--participación-en-actividades">4. 📝 Participación en Actividades</a></h3>
+<p>Encuentra instrucciones paso a paso para completar actividades y evaluaciones, como cuestionarios, tareas y foros de discusión.</p>
+<h3 id="5--seguimiento-del-progreso-y-calificaciones"><a class="header" href="#5--seguimiento-del-progreso-y-calificaciones">5. 📊 Seguimiento del Progreso y Calificaciones</a></h3>
+<p>Aprende a revisar tu progreso académico y verifica tus calificaciones y retroalimentación en cada curso.</p>
+<h3 id="6--comunicación"><a class="header" href="#6--comunicación">6. 💬 Comunicación</a></h3>
+<p>Explora las opciones para interactuar con tus profesores y compañeros, desde el chat hasta los foros de discusión y mensajes privados.</p>
+<h3 id="7--cumplimiento-de-plazos"><a class="header" href="#7--cumplimiento-de-plazos">7. ⏰ Cumplimiento de Plazos</a></h3>
+<p>Conoce las herramientas y buenas prácticas para cumplir con los plazos y gestionar tu tiempo de manera efectiva dentro de la plataforma.</p>
+<h3 id="8--buenas-prácticas"><a class="header" href="#8--buenas-prácticas">8. 🌟 Buenas Prácticas</a></h3>
+<p>Descubre recomendaciones para sacar el máximo provecho de Moodle, asegurando una participación activa y respetuosa.</p>
+<hr />
+<h3 id="-cómo-usar-esta-guía"><a class="header" href="#-cómo-usar-esta-guía">📝 <strong>Cómo usar esta guía:</strong></a></h3>
+<p>Cada sección incluye ejemplos prácticos y consejos útiles. ¡Te recomendamos seguir el orden de los temas para una experiencia completa!</p>
+<p>Recuerda: el EVA es una herramienta diseñada para mejorar tu experiencia de aprendizaje, permitiéndote acceder a todos los recursos y actividades necesarias para tu éxito académico.</p>
+<hr />
+<p>¡Esperamos que esta guía te sea de gran ayuda para explorar y dominar el EVA en Moodle! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="1--acceso-a-la-plataforma-1"><a class="header" href="#1--acceso-a-la-plataforma-1">1. 🚪 Acceso a la Plataforma</a></h2>
+<p>Para comenzar a utilizar el Entorno Virtual de Aprendizaje (EVA), sigue estos pasos:</p>
+<ul>
+<li>
+<p><strong>Cómo ingresar</strong><br />
+<img src="general/../gifs/acceso1.gif" alt="Instrucciones para ingresar al EVA" /></p>
+</li>
+<li>
+<p><strong>Restablecimiento de contraseña</strong><br />
+<img src="general/../gifs/acceso2.gif" alt="Formulario para restablecer contraseña" /></p>
+</li>
+<li>
+<p><strong>Configuración del perfil</strong><br />
+<img src="general/../gifs/acceso3.gif" alt="Configuración de perfil en EVA" /></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="cómo-ingresar"><a class="header" href="#cómo-ingresar">Cómo ingresar</a></h3>
+<p>Para acceder al Entorno Virtual de Aprendizaje (EVA), sigue estos pasos:</p>
+<ol>
+<li>
+<p>Dirígete a la URL: <a href="https://eva.yavirac.dev">https://eva.yavirac.dev</a>.<br />
+<img src="general/../img/ingreso1.png" alt="Imagen de la URL del EVA" /></p>
+</li>
+<li>
+<p>Selecciona la opción <strong>"Acceder"</strong>.<br />
+<img src="general/../img/ingreso2.png" alt="Imagen del botón Acceder" /></p>
+</li>
+<li>
+<p>Si es tu primera vez ingresando, introduce tu número de cédula tanto en el campo de <strong>usuario</strong> como en el de <strong>contraseña</strong>.
+<img src="general/../img/ingreso3.png" alt="Imagen de campos a ingresar" /></p>
+</li>
+<li>
+<p>Una vez dentro, el sistema te pedirá que personalices tu contraseña para mayor seguridad. Sigue las instrucciones en pantalla para completar este proceso.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="restablecimiento-de-contraseña"><a class="header" href="#restablecimiento-de-contraseña">Restablecimiento de contraseña</a></h3>
+<p>Si necesitas restablecer tu contraseña, sigue estos pasos:</p>
+<ol>
+<li>
+<p>Dirígete a la página principal: <a href="https://yavirac.edu.ec/">https://yavirac.edu.ec/</a>.<br />
+<img src="general/../img/rest1.png" alt="Imagen de la página principal" /></p>
+</li>
+<li>
+<p>Selecciona la opción <strong>"Plataformas"</strong>, lo que desplegará un menú con varias opciones.</p>
+</li>
+<li>
+<p>En el menú desplegable, elige <strong>"Gestión de contraseñas"</strong>.<br />
+<img src="general/../gifs/rest2.gif" alt="Gif de la opción Gestión de contraseñas" /></p>
+</li>
+<li>
+<p>Serás dirigido a un formulario donde podrás solicitar el reseteo de tu contraseña.<br />
+<img src="general/../img/rest3.png" alt="Imagen del formulario para restablecer la contraseña" /></p>
+</li>
+</ol>
+<p>Completa el formulario con la información solicitada y sigue las instrucciones para finalizar el proceso de restablecimiento.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="configuración-del-perfil"><a class="header" href="#configuración-del-perfil">Configuración del perfil</a></h3>
+<p>En el Entorno Virtual de Aprendizaje (EVA), puedes personalizar tu perfil para una experiencia más ajustada a tus necesidades. En esta sección, puedes:</p>
+<ul>
+<li><strong>Modificar tu foto de perfil</strong>: Cambia tu imagen de perfil para personalizar tu cuenta.</li>
+<li><strong>Ajustar preferencias de notificaciones</strong>: Configura las notificaciones para recibir alertas sobre actividades, tareas y mensajes importantes.</li>
+<li><strong>Actualizar datos personales</strong>: Edita tu información personal como nombre, correo electrónico, entre otros.
+<img src="general/../gifs/confp.gif" alt="Gif de la opción de editar perfil" />
+Estas opciones te permiten tener un perfil personalizado y mantenerte al tanto de las actividades dentro del EVA.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="2--navegación-en-moodle-1"><a class="header" href="#2--navegación-en-moodle-1">2. 🧭 Navegación en Moodle</a></h2>
+<p>En esta sección aprenderás a navegar por la interfaz principal de <strong>Moodle</strong> y cómo acceder a los cursos disponibles. La plataforma está diseñada para ser intuitiva, permitiéndote encontrar fácilmente las herramientas y recursos que necesitas para tu aprendizaje.</p>
+<p>Revisaremos los siguientes aspectos:</p>
+<ul>
+<li><strong>Interfaz principal</strong>: Familiarízate con la disposición y los elementos clave de la página de inicio, como el menú de navegación, las notificaciones.</li>
+<li><strong>Acceso a los cursos</strong>: Aprende cómo acceder a los cursos en los que estás inscrito, cómo visualizar los módulos y cómo explorar los recursos y actividades dentro de cada uno.</li>
+</ul>
+<p>Con esta guía, podrás navegar de manera eficiente y aprovechar al máximo todas las funcionalidades de Moodle.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="interfaz-principal"><a class="header" href="#interfaz-principal">Interfaz principal</a></h3>
+<p>La <strong>interfaz principal</strong> de Moodle es el punto de partida para acceder a todas las herramientas y recursos necesarios en tu proceso de aprendizaje. Al ingresar, verás el <strong>tablero de control</strong>, que te permitirá gestionar y visualizar toda la información relevante sobre tus cursos. En esta sección, exploraremos los siguientes elementos clave:</p>
+<ul>
+<li>
+<p><strong>Cursos</strong>: Visualiza todos los cursos en los que estás inscrito, accede a ellos con un solo clic y explora los módulos, actividades y materiales disponibles.
+<img src="estudiante/../gifs/introP1.gif" alt="Gif de la interfaz principal" /></p>
+</li>
+<li>
+<p><strong>Actividades</strong>: Desde el area personal, podrás ver las actividades pendientes y programadas, lo que te permitirá estar al tanto de las tareas y evaluaciones.
+<img src="estudiante/../gifs/introP2.gif" alt="Gif de la interfaz principal" /></p>
+</li>
+<li>
+<p><strong>Notificaciones</strong>: Recibe alertas sobre anuncios importantes, cambios en los cursos, calificaciones y otros eventos clave relacionados con tu progreso académico.
+<img src="estudiante/../gifs/introP3.gif" alt="Gif de la interfaz principal" /></p>
+</li>
+</ul>
+<p>Conocer y dominar la interfaz principal te ayudará a moverte con facilidad dentro de la plataforma y mantenerte organizado durante todo el proceso educativo.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="acceso-a-los-cursos"><a class="header" href="#acceso-a-los-cursos">Acceso a los cursos</a></h3>
+<p>Acceder a tus <strong>cursos matriculados</strong> en Moodle es fácil y rápido. Desde el tablero de control, podrás navegar entre todos los cursos en los que estás inscrito. Aquí te mostramos cómo:</p>
+<ul>
+<li>
+<p><strong>Navegar entre cursos</strong>: En la interfaz principal, verás una lista de todos los cursos en los que estás matriculado. Simplemente haz clic en el curso de tu interés para acceder a su contenido.
+<img src="estudiante/../gifs/curso1.gif" alt="Gif de cursos" /></p>
+</li>
+<li>
+<p><strong>Acceder al contenido</strong>: Dentro de cada curso, podrás explorar los materiales disponibles, como documentos, videos, presentaciones y otros recursos proporcionados por el instructor.
+<img src="estudiante/../gifs/curso2.gif" alt="Gif de cursos" /></p>
+</li>
+<li>
+<p><strong>Encontrar tareas, actividades y materiales</strong>: En cada curso, se organizarán las <strong>tareas</strong> y <strong>actividades</strong> por módulos o semanas. De esta forma, podrás localizar fácilmente las evaluaciones, actividades prácticas, foros de discusión y otros materiales relacionados con el curso.
+<img src="estudiante/../gifs/curso3.gif" alt="Gif de cursos" /></p>
+</li>
+</ul>
+<p>Dominar cómo navegar y acceder a los cursos te permitirá aprovechar al máximo tu experiencia de aprendizaje en Moodle.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="3--acceso-y-descarga-de-materiales-1"><a class="header" href="#3--acceso-y-descarga-de-materiales-1">3. 📥 Acceso y Descarga de Materiales</a></h2>
+<h3 id="guía-para-acceso-y-descarga-de-materiales-en-eva-yavirac"><a class="header" href="#guía-para-acceso-y-descarga-de-materiales-en-eva-yavirac">Guía para Acceso y Descarga de Materiales en EVA Yavirac</a></h3>
+<p>Dentro de EVA Yavirac, tus docentes pueden subir recursos educativos, como documentos, videos y enlaces externos. Aquí te mostramos cómo visualizar y descargar estos materiales.</p>
+<h2 id="paso-1-ver-y-descargar-recursos"><a class="header" href="#paso-1-ver-y-descargar-recursos">Paso 1: Ver y Descargar Recursos</a></h2>
+<ol>
+<li>
+<p>Una vez dentro de tu curso, dirígete a la sección correspondiente de <strong>Materiales</strong> o <strong>Recursos</strong> (el nombre puede variar según el curso).</p>
+</li>
+<li>
+<p>En esta sección, verás una lista de archivos que pueden incluir documentos PDF, archivos de Word, presentaciones de PowerPoint, entre otros.</p>
+<p><img src="estudiante/../gifs/descarga1.gif" alt="Ver y Descargar Recursos" /></p>
+</li>
+<li>
+<p>Para <strong>ver</strong> un archivo directamente en el navegador, haz clic sobre el nombre del archivo. Dependiendo del tipo de archivo y de la configuración del navegador, el archivo se abrirá en una nueva pestaña o directamente en la ventana actual.</p>
+</li>
+<li>
+<p>Para <strong>descargar</strong> el archivo a tu dispositivo, haz clic derecho en el nombre del archivo y selecciona la opción <strong>Guardar enlace como...</strong> o <strong>Descargar</strong>.</p>
+<p><img src="estudiante/../gifs/descarga2.gif" alt="Descargar Archivo" /></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> Algunos archivos pueden descargarse automáticamente al hacer clic en ellos. Verifica en la carpeta de <strong>Descargas</strong> de tu dispositivo.</p>
+</blockquote>
+<h2 id="paso-2-acceso-a-recursos-multimedia"><a class="header" href="#paso-2-acceso-a-recursos-multimedia">Paso 2: Acceso a Recursos Multimedia</a></h2>
+<ol>
+<li>
+<p>En la misma sección de recursos, es común que encuentres enlaces a <strong>videos, audios</strong> o <strong>enlaces externos</strong> que los docentes hayan compartido.</p>
+</li>
+<li>
+<p>Para acceder a un video o enlace multimedia:</p>
+<ul>
+<li>Haz clic sobre el enlace del video o del recurso multimedia.</li>
+<li>Si el enlace dirige a una plataforma de video (como YouTube), serás redirigido automáticamente a esa página o el video se abrirá en el mismo navegador.</li>
+</ul>
+<p><img src="estudiante/../gifs/descarga3.gif" alt="Acceso a Recursos Multimedia" /></p>
+</li>
+<li>
+<p>Si deseas <strong>guardar el enlace</strong> para verlo más tarde, puedes hacer clic derecho en el enlace y seleccionar <strong>Copiar enlace</strong>. Luego, puedes guardarlo en tus notas o en cualquier archivo de texto.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> Algunos videos y enlaces externos pueden requerir permisos adicionales o inicio de sesión en otras plataformas, según el acceso establecido por el docente.</p>
+</blockquote>
+<h2 id="paso-3-descargar-recursos-adicionales"><a class="header" href="#paso-3-descargar-recursos-adicionales">Paso 3: Descargar Recursos Adicionales</a></h2>
+<ol>
+<li>Algunos materiales pueden venir en formatos especiales (por ejemplo, archivos ZIP). Para descargarlos, sigue el mismo procedimiento de descarga y luego descomprime el archivo en tu dispositivo para acceder al contenido.</li>
+<li>Si tienes problemas para abrir algún tipo de archivo, verifica que tengas el software adecuado instalado (por ejemplo, Adobe Reader para PDF, Word para documentos .docx, etc.).</li>
+</ol>
+<hr />
+<p>¡Con estos pasos podrás acceder a todos los materiales que tus docentes compartan en EVA Yavirac! Si tienes problemas para abrir o descargar un archivo, no dudes en contactar a soporte técnico.</p>
+<hr />
+<p><strong>Instituto Yavirac</strong><br />
+EVA - Entorno Virtual de Aprendizaje</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="4-participación-en-actividades"><a class="header" href="#4-participación-en-actividades">4.📝 Participación en actividades</a></h2>
+<p>Dentro de cada curso en Moodle, encontrarás diferentes tipos de <strong>actividades</strong> diseñadas para evaluar y promover tu aprendizaje. A continuación, te mostramos cómo identificar y participar en las actividades principales:</p>
+<ol>
+<li>
+<p><strong>Tareas</strong>:<br />
+Las tareas se identifican con un ícono rosado y un símbolo de archivo.</p>
+<p><img src="estudiante/../img/tarea1.png" alt="Imagen " /></p>
+</li>
+<li>
+<p><strong>Foros de discusión</strong>:<br />
+Los foros están marcados con un ícono naranja con un símbolo de comentario.</p>
+<p><img src="estudiante/../img/foro1.png" alt="Imagen " /></p>
+</li>
+<li>
+<p><strong>Exámenes y cuestionarios</strong>:<br />
+Los exámenes se identifican con un ícono rosado y un símbolo de check.</p>
+<p><img src="estudiante/../img/exam1.png" alt="Imagen " /></p>
+</li>
+</ol>
+<p>Participar activamente en estas actividades te permitirá cumplir con los objetivos de cada curso y aprovechar al máximo tu experiencia de aprendizaje en Moodle.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tareas"><a class="header" href="#tareas">Tareas</a></h1>
+<p>Las tareas se identifican con un ícono rosado y un símbolo de archivo. En cada tarea, podrás:</p>
+<ul>
+<li>Ver el <strong>estado de entrega</strong>, <strong>estado de calificación</strong>, <strong>tiempo restante</strong>, última <strong>modificación</strong> y <strong>comentarios</strong>.</li>
+<li>Utilizar el apartado <strong>"Agregar entrega"</strong> para subir tus archivos o completar la tarea.
+<img src="estudiante/../img/tarea3.png" alt="Imagen " /></li>
+<li>Revisar y agregar <strong>comentarios</strong> relacionados con la tarea, facilitando la comunicación con el instructor.</li>
+</ul>
+<p><img src="estudiante/../img/tarea2.png" alt="Imagen " /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="foros-de-discusión"><a class="header" href="#foros-de-discusión">Foros de discusión</a></h1>
+<p>Los foros están marcados con un ícono naranja con un símbolo de comentario. Aquí podrás:</p>
+<ul>
+<li>Crear nuevos temas de conversación relacionados con el título o tema del foro.</li>
+<li>Compartir tu punto de vista y opinar sobre otros comentarios realizados en el foro.</li>
+<li>Usar el botón <strong>"Suscribirse al foro"</strong> para recibir notificaciones sobre nuevos comentarios y respuestas.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cuestionarios-y-exámenes"><a class="header" href="#cuestionarios-y-exámenes">Cuestionarios y Exámenes</a></h1>
+<p>Los exámenes se identifican con un ícono rosado y un símbolo de check. Estos pueden incluir preguntas de selección, selección múltiple, ensayo, verdadero/falso, entre otras. Los exámenes están diseñados para evaluar tus conocimientos de acuerdo a los temas tratados en el curso.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="seguimiento-del-progreso-y-calificaciones"><a class="header" href="#seguimiento-del-progreso-y-calificaciones">Seguimiento del Progreso y Calificaciones</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comunicación"><a class="header" href="#comunicación">Comunicación</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cumplimiento-de-plazos"><a class="header" href="#cumplimiento-de-plazos">Cumplimiento de Plazos</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="buenas-practicas"><a class="header" href="#buenas-practicas">Buenas Practicas</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-guía-de-uso-del-entorno-virtual-de-aprendizaje-eva-en-moodle-para-docentes"><a class="header" href="#-guía-de-uso-del-entorno-virtual-de-aprendizaje-eva-en-moodle-para-docentes">📘 Guía de Uso del Entorno Virtual de Aprendizaje (EVA) en Moodle para Docentes</a></h1>
+<p>¡Bienvenidos a la <strong>Guía de Uso del Entorno Virtual de Aprendizaje (EVA)</strong> para docentes! Esta guía está diseñada para ayudar a los docentes a utilizar <strong>Moodle</strong> de manera efectiva, permitiéndoles gestionar sus cursos, materiales y estudiantes con facilidad. Encontrarás instrucciones detalladas sobre las herramientas y opciones más importantes de la plataforma.</p>
+<hr />
+<h2 id="-qué-encontrarás-en-esta-guía-1"><a class="header" href="#-qué-encontrarás-en-esta-guía-1">📌 ¿Qué encontrarás en esta guía?</a></h2>
+<h3 id="1--acceso-a-la-plataforma-moodle"><a class="header" href="#1--acceso-a-la-plataforma-moodle">1. 🚪 Acceso a la Plataforma Moodle</a></h3>
+<ul>
+<li><strong>Cómo ingresar</strong>: Instrucciones paso a paso para acceder a Moodle (URL, usuario y contraseña inicial).</li>
+<li><strong>Restablecimiento de contraseña</strong>: Proceso para recuperar el acceso en caso de olvido de la contraseña.</li>
+<li><strong>Configuración del perfil de usuario</strong>: Pasos para actualizar tu información y preferencias de notificación.</li>
+</ul>
+<h3 id="2--gestión-de-cursos"><a class="header" href="#2--gestión-de-cursos">2. 📚 Gestión de Cursos</a></h3>
+<ul>
+<li><strong>Creación y Configuración de Cursos</strong>: Cómo crear un curso y gestionar su contenido de manera accesible.</li>
+<li><strong>Edición del Curso</strong>: Activación del modo de edición y adición de etiquetas, recursos y actividades.</li>
+<li><strong>Organización del Contenido</strong>: Opciones de estructuración mediante temas o semanas para un curso bien organizado.</li>
+</ul>
+<h3 id="3--carga-de-materiales"><a class="header" href="#3--carga-de-materiales">3. 📂 Carga de Materiales</a></h3>
+<ul>
+<li><strong>Subir Archivos</strong>: Cómo cargar y gestionar documentos, presentaciones y otros materiales de clase.</li>
+<li><strong>Recursos Multimedia</strong>: Insertar enlaces a videos y otros recursos interactivos.</li>
+<li><strong>Creación de Páginas y Carpetas</strong>: Organiza y agrupa los materiales para un acceso eficiente por parte de los estudiantes.</li>
+</ul>
+<h3 id="4--gestión-de-actividades"><a class="header" href="#4--gestión-de-actividades">4. 📝 Gestión de Actividades</a></h3>
+<ul>
+<li><strong>Foros de Discusión</strong>: Creación de foros para fomentar la participación de los estudiantes.</li>
+<li><strong>Tareas y Entregas</strong>: Configuración de tareas y revisión de trabajos enviados por los estudiantes.</li>
+<li><strong>Cuestionarios</strong>: Creación de cuestionarios con preguntas de opción múltiple, verdadero/falso, ensayo, entre otros.</li>
+</ul>
+<h3 id="5--evaluación-y-retroalimentación"><a class="header" href="#5--evaluación-y-retroalimentación">5. 📊 Evaluación y Retroalimentación</a></h3>
+<ul>
+<li><strong>Calificaciones</strong>: Uso del módulo de calificaciones para registrar y gestionar las notas.</li>
+<li><strong>Retroalimentación</strong>: Cómo proporcionar comentarios detallados, escritos o en audio, sobre las actividades de los estudiantes.</li>
+</ul>
+<h3 id="6--comunicación-1"><a class="header" href="#6--comunicación-1">6. 💬 Comunicación</a></h3>
+<ul>
+<li><strong>Mensajería Interna</strong>: Enviar mensajes directos a los estudiantes dentro de Moodle.</li>
+<li><strong>Anuncios</strong>: Uso de la herramienta de anuncios para comunicar actualizaciones importantes a todo el curso.</li>
+</ul>
+<h3 id="7--copia-de-seguridad-y-restauración"><a class="header" href="#7--copia-de-seguridad-y-restauración">7. 💾 Copia de Seguridad y Restauración</a></h3>
+<ul>
+<li><strong>Copia de Seguridad del Curso</strong>: Cómo realizar una copia de seguridad de los cursos para preservar la información.</li>
+<li><strong>Restauración de Cursos Anteriores</strong>: Cómo importar y reutilizar contenido de cursos anteriores.</li>
+</ul>
+<hr />
+<h3 id="-cómo-usar-esta-guía-1"><a class="header" href="#-cómo-usar-esta-guía-1">📝 <strong>Cómo usar esta guía:</strong></a></h3>
+<p>Cada sección contiene ejemplos y consejos prácticos para maximizar la experiencia docente en Moodle. Te recomendamos seguir el orden de los temas para una comprensión completa de las funcionalidades.</p>
+<p>Esta guía te ayudará a optimizar el uso del EVA y a gestionar tus cursos y estudiantes de manera eficiente. ¡Esperamos que sea de gran utilidad para mejorar tu experiencia docente en Moodle! 🚀</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="1--acceso-a-la-plataforma-2"><a class="header" href="#1--acceso-a-la-plataforma-2">1. 🚪 Acceso a la Plataforma</a></h2>
+<p>Para comenzar a utilizar el Entorno Virtual de Aprendizaje (EVA), sigue estos pasos:</p>
+<ul>
+<li>
+<p><strong>Cómo ingresar</strong><br />
+<img src="general/../gifs/acceso1.gif" alt="Instrucciones para ingresar al EVA" /></p>
+</li>
+<li>
+<p><strong>Restablecimiento de contraseña</strong><br />
+<img src="general/../gifs/acceso2.gif" alt="Formulario para restablecer contraseña" /></p>
+</li>
+<li>
+<p><strong>Configuración del perfil</strong><br />
+<img src="general/../gifs/acceso3.gif" alt="Configuración de perfil en EVA" /></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="cómo-ingresar-1"><a class="header" href="#cómo-ingresar-1">Cómo ingresar</a></h3>
+<p>Para acceder al Entorno Virtual de Aprendizaje (EVA), sigue estos pasos:</p>
+<ol>
+<li>
+<p>Dirígete a la URL: <a href="https://eva.yavirac.dev">https://eva.yavirac.dev</a>.<br />
+<img src="general/../img/ingreso1.png" alt="Imagen de la URL del EVA" /></p>
+</li>
+<li>
+<p>Selecciona la opción <strong>"Acceder"</strong>.<br />
+<img src="general/../img/ingreso2.png" alt="Imagen del botón Acceder" /></p>
+</li>
+<li>
+<p>Si es tu primera vez ingresando, introduce tu número de cédula tanto en el campo de <strong>usuario</strong> como en el de <strong>contraseña</strong>.
+<img src="general/../img/ingreso3.png" alt="Imagen de campos a ingresar" /></p>
+</li>
+<li>
+<p>Una vez dentro, el sistema te pedirá que personalices tu contraseña para mayor seguridad. Sigue las instrucciones en pantalla para completar este proceso.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="restablecimiento-de-contraseña-1"><a class="header" href="#restablecimiento-de-contraseña-1">Restablecimiento de contraseña</a></h3>
+<p>Si necesitas restablecer tu contraseña, sigue estos pasos:</p>
+<ol>
+<li>
+<p>Dirígete a la página principal: <a href="https://yavirac.edu.ec/">https://yavirac.edu.ec/</a>.<br />
+<img src="general/../img/rest1.png" alt="Imagen de la página principal" /></p>
+</li>
+<li>
+<p>Selecciona la opción <strong>"Plataformas"</strong>, lo que desplegará un menú con varias opciones.</p>
+</li>
+<li>
+<p>En el menú desplegable, elige <strong>"Gestión de contraseñas"</strong>.<br />
+<img src="general/../gifs/rest2.gif" alt="Gif de la opción Gestión de contraseñas" /></p>
+</li>
+<li>
+<p>Serás dirigido a un formulario donde podrás solicitar el reseteo de tu contraseña.<br />
+<img src="general/../img/rest3.png" alt="Imagen del formulario para restablecer la contraseña" /></p>
+</li>
+</ol>
+<p>Completa el formulario con la información solicitada y sigue las instrucciones para finalizar el proceso de restablecimiento.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="configuración-del-perfil-1"><a class="header" href="#configuración-del-perfil-1">Configuración del perfil</a></h3>
+<p>En el Entorno Virtual de Aprendizaje (EVA), puedes personalizar tu perfil para una experiencia más ajustada a tus necesidades. En esta sección, puedes:</p>
+<ul>
+<li><strong>Modificar tu foto de perfil</strong>: Cambia tu imagen de perfil para personalizar tu cuenta.</li>
+<li><strong>Ajustar preferencias de notificaciones</strong>: Configura las notificaciones para recibir alertas sobre actividades, tareas y mensajes importantes.</li>
+<li><strong>Actualizar datos personales</strong>: Edita tu información personal como nombre, correo electrónico, entre otros.
+<img src="general/../gifs/confp.gif" alt="Gif de la opción de editar perfil" />
+Estas opciones te permiten tener un perfil personalizado y mantenerte al tanto de las actividades dentro del EVA.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

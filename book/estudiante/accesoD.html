@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Acceso y Descarga de Materiales - ManualEVA</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../estudiante/introE.html"><strong aria-hidden="true">1.</strong> Intro_Estudiantes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../general/acceso.html"><strong aria-hidden="true">1.1.</strong> Acceso a la Plataforma</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../general/ingreso.html"><strong aria-hidden="true">1.1.1.</strong> Cómo ingresar</a></li><li class="chapter-item expanded "><a href="../general/rescontra.html"><strong aria-hidden="true">1.1.2.</strong> Restablecimiento de contraseña</a></li><li class="chapter-item expanded "><a href="../general/confiP.html"><strong aria-hidden="true">1.1.3.</strong> Configuración del perfil</a></li></ol></li><li class="chapter-item expanded "><a href="../estudiante/navegacion.html"><strong aria-hidden="true">1.2.</strong> Navegación en Moodle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../estudiante/interfaz.html"><strong aria-hidden="true">1.2.1.</strong> Interfaz principal</a></li><li class="chapter-item expanded "><a href="../estudiante/cursos.html"><strong aria-hidden="true">1.2.2.</strong> Acceso a los cursos</a></li></ol></li><li class="chapter-item expanded "><a href="../estudiante/accesoD.html" class="active"><strong aria-hidden="true">1.3.</strong> Acceso y Descarga de Materiales</a></li><li class="chapter-item expanded "><a href="../estudiante/part.html"><strong aria-hidden="true">1.4.</strong> Participacion en Actividades</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../estudiante/tareas.html"><strong aria-hidden="true">1.4.1.</strong> Tareas</a></li><li class="chapter-item expanded "><a href="../estudiante/foros.html"><strong aria-hidden="true">1.4.2.</strong> Foros de discusión</a></li><li class="chapter-item expanded "><a href="../estudiante/examen.html"><strong aria-hidden="true">1.4.3.</strong> Cuestionarios y Exámenes</a></li></ol></li><li class="chapter-item expanded "><a href="../estudiante/califi.html"><strong aria-hidden="true">1.5.</strong> Seguimiento del Progreso y Calificaciones</a></li><li class="chapter-item expanded "><a href="../estudiante/comuni.html"><strong aria-hidden="true">1.6.</strong> Comunicación</a></li><li class="chapter-item expanded "><a href="../estudiante/cumplimiento.html"><strong aria-hidden="true">1.7.</strong> Cumplimiento de Plazos</a></li><li class="chapter-item expanded "><a href="../estudiante/buenasP.html"><strong aria-hidden="true">1.8.</strong> Buenas Practicas</a></li></ol></li><li class="chapter-item expanded "><a href="../docente/introD.html"><strong aria-hidden="true">2.</strong> Intro_Docentes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../general/acceso.html"><strong aria-hidden="true">2.1.</strong> Acceso a la Plataforma</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../general/ingreso.html"><strong aria-hidden="true">2.1.1.</strong> Cómo ingresar</a></li><li class="chapter-item expanded "><a href="../general/rescontra.html"><strong aria-hidden="true">2.1.2.</strong> Restablecimiento de contraseña</a></li><li class="chapter-item expanded "><a href="../general/confiP.html"><strong aria-hidden="true">2.1.3.</strong> Configuración del perfil</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ManualEVA</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="3--acceso-y-descarga-de-materiales"><a class="header" href="#3--acceso-y-descarga-de-materiales">3. 📥 Acceso y Descarga de Materiales</a></h2>
+<h3 id="guía-para-acceso-y-descarga-de-materiales-en-eva-yavirac"><a class="header" href="#guía-para-acceso-y-descarga-de-materiales-en-eva-yavirac">Guía para Acceso y Descarga de Materiales en EVA Yavirac</a></h3>
+<p>Dentro de EVA Yavirac, tus docentes pueden subir recursos educativos, como documentos, videos y enlaces externos. Aquí te mostramos cómo visualizar y descargar estos materiales.</p>
+<h2 id="paso-1-ver-y-descargar-recursos"><a class="header" href="#paso-1-ver-y-descargar-recursos">Paso 1: Ver y Descargar Recursos</a></h2>
+<ol>
+<li>
+<p>Una vez dentro de tu curso, dirígete a la sección correspondiente de <strong>Materiales</strong> o <strong>Recursos</strong> (el nombre puede variar según el curso).</p>
+</li>
+<li>
+<p>En esta sección, verás una lista de archivos que pueden incluir documentos PDF, archivos de Word, presentaciones de PowerPoint, entre otros.</p>
+<p><img src="../gifs/descarga1.gif" alt="Ver y Descargar Recursos" /></p>
+</li>
+<li>
+<p>Para <strong>ver</strong> un archivo directamente en el navegador, haz clic sobre el nombre del archivo. Dependiendo del tipo de archivo y de la configuración del navegador, el archivo se abrirá en una nueva pestaña o directamente en la ventana actual.</p>
+</li>
+<li>
+<p>Para <strong>descargar</strong> el archivo a tu dispositivo, haz clic derecho en el nombre del archivo y selecciona la opción <strong>Guardar enlace como...</strong> o <strong>Descargar</strong>.</p>
+<p><img src="../gifs/descarga2.gif" alt="Descargar Archivo" /></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> Algunos archivos pueden descargarse automáticamente al hacer clic en ellos. Verifica en la carpeta de <strong>Descargas</strong> de tu dispositivo.</p>
+</blockquote>
+<h2 id="paso-2-acceso-a-recursos-multimedia"><a class="header" href="#paso-2-acceso-a-recursos-multimedia">Paso 2: Acceso a Recursos Multimedia</a></h2>
+<ol>
+<li>
+<p>En la misma sección de recursos, es común que encuentres enlaces a <strong>videos, audios</strong> o <strong>enlaces externos</strong> que los docentes hayan compartido.</p>
+</li>
+<li>
+<p>Para acceder a un video o enlace multimedia:</p>
+<ul>
+<li>Haz clic sobre el enlace del video o del recurso multimedia.</li>
+<li>Si el enlace dirige a una plataforma de video (como YouTube), serás redirigido automáticamente a esa página o el video se abrirá en el mismo navegador.</li>
+</ul>
+<p><img src="../gifs/descarga3.gif" alt="Acceso a Recursos Multimedia" /></p>
+</li>
+<li>
+<p>Si deseas <strong>guardar el enlace</strong> para verlo más tarde, puedes hacer clic derecho en el enlace y seleccionar <strong>Copiar enlace</strong>. Luego, puedes guardarlo en tus notas o en cualquier archivo de texto.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> Algunos videos y enlaces externos pueden requerir permisos adicionales o inicio de sesión en otras plataformas, según el acceso establecido por el docente.</p>
+</blockquote>
+<h2 id="paso-3-descargar-recursos-adicionales"><a class="header" href="#paso-3-descargar-recursos-adicionales">Paso 3: Descargar Recursos Adicionales</a></h2>
+<ol>
+<li>Algunos materiales pueden venir en formatos especiales (por ejemplo, archivos ZIP). Para descargarlos, sigue el mismo procedimiento de descarga y luego descomprime el archivo en tu dispositivo para acceder al contenido.</li>
+<li>Si tienes problemas para abrir algún tipo de archivo, verifica que tengas el software adecuado instalado (por ejemplo, Adobe Reader para PDF, Word para documentos .docx, etc.).</li>
+</ol>
+<hr />
+<p>¡Con estos pasos podrás acceder a todos los materiales que tus docentes compartan en EVA Yavirac! Si tienes problemas para abrir o descargar un archivo, no dudes en contactar a soporte técnico.</p>
+<hr />
+<p><strong>Instituto Yavirac</strong><br />
+EVA - Entorno Virtual de Aprendizaje</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../estudiante/cursos.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../estudiante/part.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../estudiante/cursos.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../estudiante/part.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
